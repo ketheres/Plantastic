@@ -72,9 +72,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bug.cs" />
     <Compile Include="Assets\Scripts\Card.cs" />
+    <Compile Include="Assets\Scripts\Cellar.cs" />
     <Compile Include="Assets\Scripts\Chapter.cs" />
+    <Compile Include="Assets\Scripts\Cluster.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Hole.cs" />
+    <Compile Include="Assets\Scripts\Main_Menu.cs" />
+    <Compile Include="Assets\Scripts\Plant.cs" />
+    <Compile Include="Assets\Scripts\SceneBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Window.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
