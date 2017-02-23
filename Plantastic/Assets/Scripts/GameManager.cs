@@ -9,14 +9,16 @@ public class GameManager : MonoBehaviour {
     public int day;
     public TurnPhase turnPhase;
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
+        inventory = GameObject.FindGameObjectsWithTag("Item");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+    
 }
 
 public enum TurnPhase
