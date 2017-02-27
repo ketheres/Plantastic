@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[System.Serializable]
 public class Card : MonoBehaviour {
     public string cardName;
+    public enum cardType { PLANT, BUG, EVENT, ACTION };
     public Sprite front;
     public Sprite back;
     bool flipCard;                      //for when you want to flip a card.

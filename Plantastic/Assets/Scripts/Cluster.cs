@@ -3,8 +3,7 @@ using System.Collections;
 
 public class Cluster : MonoBehaviour
 {
-    public int happiness;
-    public int energy = 10;
+    public int energy = 5;
     public GameObject[] bugs;
     public GameObject[] plants;
 	// Use this for initialization

@@ -11,20 +11,14 @@ public class SceneBehaviour : StateMachineBehaviour
         WINDOW
     }
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 }
-/*
-public enum MainState
-{
-    MAIN_MENU,
-    CELLAR,
-    HOLE,
-    WINDOW
-}
-*/

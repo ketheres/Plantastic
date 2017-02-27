@@ -2,16 +2,20 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-    public Chapter[] chapters;
-    public int currentChapter;
+    [Header("Header")]
+    [Tooltip("Tooltip")]
+    public Chapter[]    chapters;
+    public int          currentChapter;
     public GameObject[] inventory;
-    public Card[] cards;
-    public int day;
-    public TurnPhase turnPhase;
+    public Card[]       cards;
+    public int          day;
+    public TurnPhase    turnPhase;
+    public Animator     animator;
 	// Use this for initialization
 	void Start ()
     {
         inventory = GameObject.FindGameObjectsWithTag("Item");
+        
 	}
 	
 	// Update is called once per frame
