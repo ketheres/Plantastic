@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plantastic.CSharp", "Plantastic.CSharp.csproj", "{28C865C9-3158-15AA-092D-E6ACD6E001DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plantastic", "Plantastic.csproj", "{AA996851-E069-C2FC-8408-6A1F8BDDE1D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{28C865C9-3158-15AA-092D-E6ACD6E001DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28C865C9-3158-15AA-092D-E6ACD6E001DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28C865C9-3158-15AA-092D-E6ACD6E001DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28C865C9-3158-15AA-092D-E6ACD6E001DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA996851-E069-C2FC-8408-6A1F8BDDE1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA996851-E069-C2FC-8408-6A1F8BDDE1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA996851-E069-C2FC-8408-6A1F8BDDE1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA996851-E069-C2FC-8408-6A1F8BDDE1D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
