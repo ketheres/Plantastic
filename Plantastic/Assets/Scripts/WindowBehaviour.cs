@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindowBehaviour : StateMachineBehaviour {
+public class WindowBehaviour : StateMachineBehaviour
+{
     GameManager gameManager;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("isWindow", false);
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        gameManager.BGSprite.sprite = gameManager.windowBG;
+        gameManager.BGSprite.sprite = gameManager.chapters[gameManager.currentChapter].windowBG;
+        gameManager.menuButton.onClick.AddListener(onMenuClick);
+        gameManager.cellarButton.gameObject.SetActive(true);
+        gameManager.cellarButton.onClick.AddListener(OnCellarClick);
     }
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -19,24 +23,34 @@ public class WindowBehaviour : StateMachineBehaviour {
         {
             animator.SetBool("isCellar", true);
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        /*else if (Input.GetKeyDown(KeyCode.Q))
         {
             animator.SetBool("isMainMenu", true);
         }
+        */
 	}
+    void onMenuClick()
+    {
+        gameManager.animator.SetBool("isMainMenu", true);
+    }
+    void OnCellarClick()
+    {
+        gameManager.animator.SetBool("isCellar", true);
+    }
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        gameManager.cellarButton.onClick.RemoveListener(OnCellarClick);
+        gameManager.menuButton.onClick.RemoveListener(onMenuClick);
+    }
 
-	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+    // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
+    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //
+    //}
 
-	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
-	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
-
-	// OnStateIK is called right after Animator.OnAnimatorIK(). Code that sets up animation IK (inverse kinematics) should be implemented here.
-	//override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+    // OnStateIK is called right after Animator.OnAnimatorIK(). Code that sets up animation IK (inverse kinematics) should be implemented here.
+    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //
+    //}
 }
